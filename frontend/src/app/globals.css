@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 255, 0;
+  --background-rgb: 0, 0, 0;
+}
+
+body {
+  color: #00ff00;
+  background: #000000;
+  font-family: 'Consolas', monospace;
+}
+
+.win95-window {
+  @apply bg-[#c0c0c0] border-2 border-t-[#ffffff] border-l-[#ffffff] border-r-[#808080] border-b-[#808080] shadow-[2px_2px_0px_0px_#000000] p-1;
+}
+
+.win95-title-bar {
+  @apply bg-[#000080] text-white px-2 py-1 flex items-center justify-between;
+}
+
+.win95-button {
+  @apply bg-[#c0c0c0] border-2 border-t-[#ffffff] border-l-[#ffffff] border-r-[#808080] border-b-[#808080] px-4 py-1 text-sm font-bold active:border-t-[#808080] active:border-l-[#808080] active:border-r-[#ffffff] active:border-b-[#ffffff];
+}
+
+.win95-input {
+  @apply bg-white border-2 border-t-[#808080] border-l-[#808080] border-r-[#ffffff] border-b-[#ffffff] px-2 py-1 focus:outline-none;
+}
+
+.win95-scrollbar {
+  @apply bg-[#c0c0c0] border-2 border-t-[#ffffff] border-l-[#ffffff] border-r-[#808080] border-b-[#808080];
+}
+
+.win95-scrollbar-thumb {
+  @apply bg-[#808080] border-2 border-t-[#ffffff] border-l-[#ffffff] border-r-[#808080] border-b-[#808080];
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[#c0c0c0];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#808080] border-2 border-t-[#ffffff] border-l-[#ffffff] border-r-[#808080] border-b-[#808080];
+}
+
+::-webkit-scrollbar-corner {
+  @apply bg-[#c0c0c0];
+} 
